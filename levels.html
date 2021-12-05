@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html {    
+    background: url('pict.jpeg') no-repeat center fixed;     
+    background-size: cover;
+}
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color:gray;
+  opacity: 0.5;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: gray;
+  opacity: 0.5;
+  color: white;
+}
+</style>
+</head>
+<body >
+	<h1 style="color: white;text-align: center;">DIABETIC MANAGMENT SYSTEM</h1>
+
+<ul>
+  <li><a class="active" href="levels.html" style="color: white;" >levels for the day</a></li>
+  <li><a href="analysis.html"style="color: white;" >Health Issues</a></li>
+  <li><a href="call.html"style="color: white;" >call doctor</a></li>
+  <li><a href="feedback.html"style="color: white;" >feedback</a></li>
+</ul>
+
+<div style="text-align: left;margin-left:25%;padding:1px 16px;height:100%;width:80%">
+	<br>
+	<div style="text-align: center;border: 5px solid white;border-radius: 20px;color:gray;width:40%;height:15%;color: white">
+		<p><h3>Please enter your levels</h3></p>
+
+<input id="numb" type="text">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x, text;
+  x = document.getElementById("numb").value;
+  if (isNaN(x) || x < 1) 
+  {
+    text = "you have entered invalid levels ";
+  } 
+  else if(x>1&&x<=60)
+   {
+    text = "your levels are very low ! and any plan can be suggested only after consultation of the doctor please cosult our doctor immediatly<br>special diet plan and excersise plan  can be issued by our doctor";
+  }
+  else if(x>60&&x<=130)
+  {
+    text="you diabetic levels seems to be perfect! <br>Please follow this plan to maintain these stable levels<br><br>Diet plan:<br>* pre breakfast(6:00am -7:00am):warm water/green tea<br>* breakfast(8:00am):idli-4/chapathi-2/dosa-2 with cocunut/peanut chutney<br>* prelunch(11:00am):ragi malt/protien shake(with fibre content)<br>* lunch(1:00pm):roti-2/brown rice-one cup + dal/sambhar + vegetable curry/chicken/fish(no beef or high fat meat)<br>* snacks(5:00pm):biskets/sprouts+ coffee/tea(with less sugar)<br>* dinner(7:30pm-8:00pm):chapthi-1/rice-half cup + dal + 1-cup boiled vegtables<br><br>excersise plan:<br>*walking-40min/jogging-20min (pre breakfast time)<br>*yoga-kapalbakthi/mudrasan once a day  <br>  ";
+  }
+  else if(x>130&&x<=200)
+  {
+    text="you diabetic levels seems to be high slightly! <br>Please follow this plan to maintain these stable levels<br><br>Diet plan:<br>* pre breakfast(6:00am -7:00am):warm water/green tea<br>* breakfast(8:00am):idli-3/chapathi-2/dosa-2 with ginger chutney ( no cocunut/peanut chutney)<br>* prelunch(11:00am):ragi malt/protien shake(with fibre content)<br>* lunch(1:00pm):roti-1/brown rice-half cup  + vegetable curry(less oil and no potatoes and high carbohydrated vegtables)+chicken/fish(no beef or high fat meat)<br>* snacks(5:00pm):dry fruits/sprouts+ coffee/tea(with no sugar)<br>* dinner(7:30pm-8:00pm): 2-cups boiled vegtables<br><br>excersise plan:<br>*walking-1hr/jogging-30min (pre breakfast time)<br>*yoga-kapalbakthi/mudrasan twice a day  <br> ";
+  }
+  else if(x>200&&x<=300)
+  {
+    text="you diabetic levels seems to be high! please change your tablet dose by consulting our doctor <br>Please follow this plan to maintain these stable levels<br><br>Diet plan:<br>* pre breakfast(6:00am -7:00am):warm water/green tea<br>* breakfast(8:00am):idli-3 with ginger chutney ( no cocunut/peanut chutney)<br>* prelunch(11:00am):ragi malt/protien shake(with fibre content)<br>* lunch(1:00pm):boiled vegtables/chicken curry(no oil and less salt<br>* snacks(5:00pm):dry fruits/sprouts+ buttermilk(no coffee/tea<br>* dinner(7:30pm-8:00pm): 2-cups boiled vegtables<br><br>excersise plan:<br>*walking-1hr/jogging-30min (pre breakfast time)<br>*yoga-kapalbakthi/mudrasan thrice a day  <br> ";
+  }
+  else
+  {
+    text="your levels are very high  ! and any plan can be suggested only after consultation of the doctor please cosult our doctor immediatly<br>special diet plan and excersise plan  can be issued by our doctor";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+</script>
+	 </div>
+ 
+</div>
+
+</body>
+</html>

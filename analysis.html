@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  html {    
+    background: url('pict.jpeg') no-repeat center fixed;     
+    background-size: cover;
+}
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color:gray;
+  opacity: 0.5;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: gray;
+  opacity: 0.5;
+  color: white;
+}
+</style>
+</head>
+<body onload='document.form1.text1.focus()'>
+  <h1 style="color: white;text-align: center;">DIABETIC MANAGMENT SYSTEM</h1>
+
+<ul>
+  <li><a class="levels.html" href="levels.html" style="color: white;" >levels for the day</a></li>
+  <li><a href="active"style="color: white;" >Health Issues</a></li>
+  <li><a href="call.html"style="color: white;" >call doctor</a></li>
+  <li><a href="feedback.html"style="color: white;" >feedback</a></li>
+</ul>
+
+<div style="text-align: left;margin-left:25%;padding:1px 16px;height:100%;width:80%">
+<div class="mail" style="text-align: center;border: 5px solid white;border-radius: 20px;color:gray;width:40%;height:15%;color: white">
+<p><h2>Convey your problem</h2></p>
+<form name="form1" action="#">
+<ul>
+  <br>
+<li><input type='text' name='text1'/></li>
+<br>
+<li><input type="submit" name="submit" value="Submit" onclick="alphanumeric(document.form1.text1)" /></li>
+<li>&nbsp;</li>
+</ul>
+</form>
+</div>
+
+<script>
+function alphanumeric(inputtxt)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(inputtxt.value.match(letters))
+{
+alert('Problems has been noted:Any more write below');
+document.form1.text1.focus();
+return true;
+}
+else
+{
+alert('Please input alphanumeric characters only');
+return false;
+}
+}
+</script>
+   </div>
+ 
+</div>
+
+</body>
+</html>

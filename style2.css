@@ -1,0 +1,25 @@
+.header{
+	margin:auto;
+	text-align :center;
+    
+}
+
+form{
+	display:flex;
+	flex-direction:column;
+}
+
+form>input{
+	margin:10px;
+}
+
+a{
+	width:50%;
+	margin:auto;
+	color:black;
+}
+.container{
+	width:60%;
+	margin:auto;
+
+}
